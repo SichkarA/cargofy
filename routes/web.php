@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'RouteController@getAllRoutes');
+
+Route::post('/', 'RouteController@addRoute');
