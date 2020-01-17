@@ -11,6 +11,30 @@
 |
 */
 
-Route::get('/', 'RouteController@getAllRoutes');
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
-Route::post('/', 'RouteController@addRoute');
+
+//Route::get('/', 'RouteController@get');
+//Route::post('/', 'RouteController@create');
+
+//Route::get('/', function () {
+//    return view('cargofy');
+//});
+
+//
+//Route::get('/', 'RouteController@get');
+//Route::post('/', 'RouteController@create');
+
+Route::get('/try', function (Request $request) {
+
+    $link = tap(new App\Http\Controllers\RouteController())->get();
+
+    return view('cargofy');
+});
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
