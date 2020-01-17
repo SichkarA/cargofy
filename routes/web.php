@@ -27,12 +27,14 @@
 //Route::get('/', 'RouteController@get');
 //Route::post('/', 'RouteController@create');
 
-Route::get('/try', function (Request $request) {
-
-    $link = tap(new App\Http\Controllers\RouteController())->get();
-
-    return view('cargofy');
-});
+//Route::get('/try', function (Request $request) {
+//
+//    $link = tap(new App\Http\Controllers\RouteController())->get();
+//
+//    return view('cargofy');
+//});
+Route::get('/', 'RouteController@get');
+Route::post('/', 'RouteController@create');
 
 
 Auth::routes();

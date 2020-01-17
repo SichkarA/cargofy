@@ -19,10 +19,13 @@ class RouteController extends Controller
             ->join('loads', 'routes.load_id', '=', 'loads.id')
             ->get()
             ->toArray();
-//        return new JsonResponse($result);
-//        $result = json_encode($result);
-        return (new JsonResponse($result));
-
+        $total = DB::table('routes')
+            ->count('id');
+//        return (new JsonResponse($result));
+//        print_r($result);
+//        exit;
+        return view('cargofy')->with(['stdClass' => $result,
+                                            'total' => $total]);
     }
     public function create(Request $request)
     {
