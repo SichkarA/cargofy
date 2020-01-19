@@ -12,6 +12,7 @@ class RouteController extends Controller
      * @return void
      */
 //    public $routes;
+
     public function get()
     {
         $result = DB::table('routes')
@@ -63,4 +64,16 @@ class RouteController extends Controller
         );
 
     }
+//
+//    public function updateCustomerRecord(Request $request)
+//    {
+//        // do something here
+//
+//        $data = $request->all(); // This will get all the request data.
+//
+//        dd($data); // This will dump and die
+//
+//        $this->get();
+//    }
+
 }

@@ -36,6 +36,8 @@
 Route::get('/', 'RouteController@get');
 Route::post('/', 'RouteController@create');
 
+//Route::post('/ajaxupdate', 'RouteController@updateCustomerRecord');
+
 
 Auth::routes();
 
